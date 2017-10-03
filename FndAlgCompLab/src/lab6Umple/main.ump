@@ -1,0 +1,21 @@
+
+class Customer {
+  name;
+  hasAccount;
+   0..1 e <@>- * Account a;
+}
+
+class Account{
+  accNumber;
+  date;
+  accountHolder;
+  ordersComing;
+   1 -- * Order; 
+}
+
+class Order{
+  productKey;
+  productName;
+  shipped;
+  validOrder;  
+}
