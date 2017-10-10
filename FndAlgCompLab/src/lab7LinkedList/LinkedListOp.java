@@ -9,37 +9,48 @@ public class LinkedListOp {
 		LinkedList<String> a = new LinkedList<String>();
 		LinkedList<String> b = new LinkedList<String>();
 		
+		//add stuff in A
 		a.add("Tulsa");
 		a.add("Ada");
 		a.add("Broken Arrow");
 		a.add("Owasso");
 		
-		System.out.println(a);
+		System.out.println("list A: \n" + a);
 		
+		//add another
 		a.add(1, "OKC");
-		System.out.println(a);
+		System.out.println("Add 2nd element: \n" + a);
 		
+		//add stuff in B
 		b.add("74104");
 		b.add("74135");
 		b.add("foo");
 		b.add("hello world");
 		b.add("777");
 		
-		System.out.println(b);
+		System.out.println("list B: \n" + b);
 		
+		//append B onto the end of A
 		a.addAll(b);
-		System.out.println(a);
+		System.out.println("B added onto A: \n" + a);
 		
+		//delete every other element
+		int j=2;
 		for(int i = 1; i<a.size(); i++) {
-			if(i%2!=0){
-				a.remove(i);
+			if(j%2==0) {
+				if(i%2!=0){
+					a.remove(i);
+				}
 			}
-		}
-		if(a.size()%2!=0) {
-			a.removeLast();
+			else {
+				if(i%2==0) {
+					a.remove(i);
+				}
+			}
+			j++;
 		}
 		
-		System.out.println(a);
+		System.out.println("Every other element removed:\n"+ a);
 		
 		LinkedList<String> c = new LinkedList<String>();
 		ListIterator<String> iter = a.listIterator();
@@ -51,7 +62,7 @@ public class LinkedListOp {
 			c.add(f);
 		}
 		
-		System.out.println("list c: " + c);
+		System.out.println("list C: \n" + c);
 		
 	}
 
