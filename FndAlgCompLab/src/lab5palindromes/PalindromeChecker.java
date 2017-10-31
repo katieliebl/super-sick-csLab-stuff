@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class PalindromeChecker {
 
+	/*
 	public static void main(String[] args) {
 		System.out.println("Palindrome checker!! Enter a string to test.");
 		System.out.println("DO NOT include punctuation unless it goes with the palindrome.");
@@ -18,8 +19,10 @@ public class PalindromeChecker {
 			}
 		}
 	}
+	*/
 	
-	public static boolean isAPalindrome(String str) {
+	//Main doesn't work unless this method is static
+	public boolean isAPalindrome(String str) {
 		str = str.toLowerCase().replaceAll(" ", ""); //ignore case & remove spaces
 		//System.out.println(str);
 		if(str.length() == 0) { //base case #1: an empty string
